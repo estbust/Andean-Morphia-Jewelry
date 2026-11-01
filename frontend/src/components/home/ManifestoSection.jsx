@@ -1,110 +1,153 @@
-import { Sun, Moon, Compass } from 'lucide-react';
+import { Sun, Moon, Compass, Sparkles } from 'lucide-react';
 import logoWings from '../../assets/brand/logo-wings.svg';
 import minimalistLogo from '../../assets/brand/minimalist-logo.svg';
 
 export default function ManifestoSection() {
   return (
-    <section id="manifiesto" className="py-24 sm:py-32 bg-morphia-beige/40 border-y border-morphia-beige/60 relative overflow-hidden">
-      {/* Subtle Wing Ambient Glow */}
+    <section id="manifiesto" className="py-24 sm:py-32 bg-morphia-beige/35 border-y border-morphia-beige/60 relative overflow-hidden">
+      {/* Subtle Atmosphere */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-morphia-blue/20 rounded-full blur-3xl pointer-events-none -z-10" 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-morphia-blue/15 rounded-full blur-3xl pointer-events-none -z-10" 
         aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Story Introduction */}
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center justify-center p-3 rounded-full bg-morphia-white/80 border border-morphia-beige/70 shadow-sm mb-2">
+        <div className="max-w-3xl mx-auto text-center space-y-5 mb-16 sm:mb-20">
+          <div className="inline-flex items-center gap-2.5 text-[11px] sm:text-xs tracking-[0.28em] uppercase font-medium text-morphia-muted border-b border-morphia-gold/40 pb-1.5">
             <img
               src={minimalistLogo}
-              alt="Morphia butterfly seal"
-              className="w-8 h-6 text-morphia-dark"
+              alt=""
+              className="w-4 h-3.5 opacity-80"
             />
+            <span>El Manifiesto de Andean Morphia</span>
           </div>
 
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-morphia-muted block">
-            El Manifiesto de Andean Morphia
-          </span>
-
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-morphia-dark leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-morphia-dark leading-[1.18] font-normal">
             Donde la nobleza andina se funde con el arte de renacer
           </h2>
 
-          <p className="font-serif italic text-xl sm:text-2xl text-morphia-dark/90 leading-relaxed">
-            &ldquo;La transformación no es perder lo que fuiste, sino tener el coraje de volver a brillar en tu versión más libre y soberana.&rdquo;
-          </p>
-        </div>
-
-        {/* Central Visual Wing Monogram */}
-        <div className="my-16 flex justify-center">
-          <div className="relative p-8 sm:p-12 rounded-3xl bg-morphia-white/70 border border-morphia-beige/80 shadow-md backdrop-blur-sm max-w-xl w-full text-center">
-            <img
-              src={logoWings}
-              alt="Andean Morphia Wings Monogram"
-              className="w-48 sm:w-64 h-auto mx-auto filter drop-shadow-sm text-morphia-dark"
-            />
-            <p className="mt-4 text-xs tracking-widest uppercase font-semibold text-morphia-muted">
-              Símbolo de Metamorfosis & Origen Cusqueño
+          <div className="pt-2">
+            <p className="font-serif italic text-xl sm:text-2xl text-morphia-dark/90 leading-relaxed font-normal max-w-2xl mx-auto">
+              &ldquo;La transformación no es perder lo que fuiste, sino tener el coraje de volver a brillar en tu versión más libre y soberana.&rdquo;
             </p>
           </div>
         </div>
 
-        {/* 3 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Asymmetric Editorial Pillars Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Pillar 1: Morphia */}
-          <div className="bg-morphia-white/85 rounded-2xl p-8 border border-morphia-beige/70 shadow-sm flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-morphia-blue/30 text-morphia-dark flex items-center justify-center">
-                <Compass className="w-5 h-5" />
+          {/* Featured Hero Pillar (5 Cols): The Morphia Metamorphosis & Wings Monogram */}
+          <div className="lg:col-span-5 bg-white border border-morphia-beige/80 p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden shadow-sm group">
+            {/* Architectural Top Index */}
+            <div className="flex items-center justify-between pb-4 border-b border-morphia-beige/40">
+              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-morphia-muted font-medium">
+                Pilar I · Filosofía
+              </span>
+              <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-morphia-gold">
+                Metamorfosis
+              </span>
+            </div>
+
+            {/* Central Visual Monogram Display */}
+            <div className="my-8 py-6 px-4 bg-morphia-cream/30 border border-morphia-beige/50 text-center relative">
+              <img
+                src={logoWings}
+                alt="Alas Andean Morphia"
+                className="w-44 sm:w-52 h-auto mx-auto filter drop-shadow-sm group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <span className="block mt-4 text-[9px] uppercase tracking-[0.25em] font-medium text-morphia-muted">
+                Sello Emblemático Morphia
+              </span>
+            </div>
+
+            {/* Pillar Content */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 text-morphia-dark">
+                <Compass className="w-4 h-4 text-morphia-gold" />
+                <h3 className="font-serif text-2xl text-morphia-dark font-normal">
+                  El Vuelo de la Morphia
+                </h3>
               </div>
-              <h3 className="font-serif text-xl text-morphia-dark">
-                El Vuelo de la Morphia
-              </h3>
               <p className="text-xs sm:text-sm text-morphia-muted leading-relaxed font-light">
-                La mariposa Morphia azul habita los bosques nubosos andino-amazónicos de Cusco. Su ciclo nos enseña que el crisálido no es un encierro, sino la antesala del despertar hacia tu propia luminosidad.
+                La mariposa Morphia azul habita los bosques nubosos andino-amazónicos del Cusco. Su ciclo vital nos recuerda que la crisálida no es un encierro, sino la antesala obligada del despertar hacia tu propia luminosidad.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-morphia-beige/40 text-[11px] uppercase tracking-wider font-semibold text-morphia-dark">
-              Transformación & Libertad
+
+            <div className="mt-8 pt-4 border-t border-morphia-beige/40 flex items-center justify-between text-[10px] uppercase tracking-[0.2em] font-medium text-morphia-dark">
+              <span>Renovación & Libertad</span>
+              <Sparkles className="w-3 h-3 text-morphia-gold" />
             </div>
           </div>
 
-          {/* Pillar 2: Andes Heritage */}
-          <div className="bg-morphia-white/85 rounded-2xl p-8 border border-morphia-beige/70 shadow-sm flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-morphia-beige text-morphia-dark flex items-center justify-center">
-                <Sun className="w-5 h-5 text-morphia-gold" />
-              </div>
-              <h3 className="font-serif text-xl text-morphia-dark">
-                Orfebrería Ancestral Cusqueña
-              </h3>
-              <p className="text-xs sm:text-sm text-morphia-muted leading-relaxed font-light">
-                Cusco no es solo nuestro hogar, es la raíz de un linaje de orfebres que honran los metales nobles con respeto y devoción. Cada anillo nace de manos artesanas que funden, cincelan y pulen con paciencia ancestral.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-morphia-beige/40 text-[11px] uppercase tracking-wider font-semibold text-morphia-dark">
-              Hecho a Mano en Cusco
-            </div>
-          </div>
+          {/* Staggered Companion Pillars (7 Cols): Ancestral Craft & Lunar Silver */}
+          <div className="lg:col-span-7 flex flex-col justify-between gap-8">
+            
+            {/* Companion Pillar 2: Ancestral Cusco Goldsmithing */}
+            <div className="bg-white border border-morphia-beige/80 p-8 sm:p-10 flex-1 flex flex-col justify-between shadow-sm">
+              <div>
+                <div className="flex items-center justify-between pb-4 border-b border-morphia-beige/40 mb-5">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-morphia-muted font-medium">
+                    Pilar II · Proveniencia
+                  </span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-morphia-gold">
+                    Cusco Imperial
+                  </span>
+                </div>
 
-          {/* Pillar 3: Silver 950 */}
-          <div className="bg-morphia-white/85 rounded-2xl p-8 border border-morphia-beige/70 shadow-sm flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-morphia-silver/20 text-morphia-dark flex items-center justify-center">
-                <Moon className="w-5 h-5 text-morphia-silver" />
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 bg-morphia-beige/50 text-morphia-dark flex items-center justify-center">
+                      <Sun className="w-4 h-4 text-morphia-gold" />
+                    </div>
+                    <h3 className="font-serif text-xl sm:text-2xl text-morphia-dark font-normal">
+                      Orfebrería Ancestral Cusqueña
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-morphia-muted leading-relaxed font-light">
+                    Cusco no es únicamente nuestra cuna, es la raíz viva de un linaje de maestros plateros que honran los metales nobles con respeto y devoción. Cada anillo nace de manos artesanas que funden, cincelan y bruñen el metal con paciencia y maestría milenaria.
+                  </p>
+                </div>
               </div>
-              <h3 className="font-serif text-xl text-morphia-dark">
-                Plata 950: El Metal Lunar
-              </h3>
-              <p className="text-xs sm:text-sm text-morphia-muted leading-relaxed font-light">
-                Elegimos la ley 950 por su blancura resplandeciente y autenticidad. En la cosmología andina, la plata (Qollqe) es la manifestación de Mama Killa, protectora de las transiciones y los ciclos del corazón.
-              </p>
+
+              <div className="mt-6 pt-4 border-t border-morphia-beige/40 text-[10px] uppercase tracking-[0.2em] font-medium text-morphia-dark">
+                Hecho a Mano en Talleres Tradicionales del Valle Sagrado
+              </div>
             </div>
-            <div className="mt-6 pt-4 border-t border-morphia-beige/40 text-[11px] uppercase tracking-wider font-semibold text-morphia-dark">
-              Pureza & Protección Energética
+
+            {/* Companion Pillar 3: Silver 950 - Lunar Metal */}
+            <div className="bg-white border border-morphia-beige/80 p-8 sm:p-10 flex-1 flex flex-col justify-between shadow-sm">
+              <div>
+                <div className="flex items-center justify-between pb-4 border-b border-morphia-beige/40 mb-5">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-morphia-muted font-medium">
+                    Pilar III · Alquimia
+                  </span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-morphia-silver">
+                    Qollqe · Mama Killa
+                  </span>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 bg-morphia-silver/15 text-morphia-dark flex items-center justify-center">
+                      <Moon className="w-4 h-4 text-morphia-silver" />
+                    </div>
+                    <h3 className="font-serif text-xl sm:text-2xl text-morphia-dark font-normal">
+                      Plata 950: El Metal Lunar
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-morphia-muted leading-relaxed font-light">
+                    Elegimos con firmeza la ley 950 por su blancura resplandeciente, tacto noble y pureza inalterable. En la cosmovisión andina, la plata (Qollqe) es la manifestación de Mama Killa, deidad protectora de las transiciones, el alma y los ciclos de renovación interior.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-morphia-beige/40 text-[10px] uppercase tracking-[0.2em] font-medium text-morphia-dark">
+                Pureza 95% Garantizada · Protección & Trascendencia
+              </div>
             </div>
+
           </div>
         </div>
 

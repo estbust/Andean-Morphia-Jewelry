@@ -64,69 +64,70 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 bg-morphia-dark/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-morphia-dark/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
       onClick={onClose}
     >
       <div
-        className="bg-morphia-cream rounded-3xl max-w-xl w-full border border-morphia-beige shadow-2xl relative overflow-hidden my-auto p-6 sm:p-8 animate-in zoom-in-95 duration-200"
+        className="bg-morphia-cream max-w-xl w-full border border-morphia-beige/80 shadow-2xl relative overflow-hidden my-auto p-6 sm:p-8 md:p-10 animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-morphia-white/80 hover:bg-morphia-white text-morphia-muted hover:text-morphia-dark transition-colors"
+          className="absolute top-4 right-4 p-2.5 bg-white/90 hover:bg-white text-morphia-dark border border-morphia-beige/80 transition-colors shadow-sm focus:outline-none"
           aria-label="Cerrar modal"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
         {completedOrder ? (
           /* Success Screen */
-          <div className="text-center py-6 space-y-4">
-            <div className="w-16 h-16 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto shadow-sm">
-              <CheckCircle2 className="w-9 h-9" />
+          <div className="text-center py-6 space-y-5">
+            <div className="w-14 h-14 bg-white border border-green-700/30 text-green-800 flex items-center justify-center mx-auto shadow-sm">
+              <CheckCircle2 className="w-8 h-8" />
             </div>
 
-            <span className="text-xs uppercase tracking-widest font-semibold text-morphia-gold block">
-              ¡Pedido Confirmado!
-            </span>
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-morphia-gold block mb-1">
+                Atelier Cusco · Pedido Confirmado
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl text-morphia-dark font-normal">
+                Tu joya comenzará su viaje
+              </h3>
+            </div>
 
-            <h3 className="font-serif text-2xl sm:text-3xl text-morphia-dark">
-              Tu joya comenzará su viaje
-            </h3>
-
-            <div className="p-4 rounded-2xl bg-morphia-white border border-morphia-beige max-w-md mx-auto text-left text-xs space-y-2">
+            <div className="p-5 bg-white border border-morphia-beige/80 max-w-md mx-auto text-left text-xs space-y-2.5 shadow-sm">
               <div className="flex justify-between border-b border-morphia-beige/40 pb-2">
-                <span className="text-morphia-muted">Número de Pedido:</span>
+                <span className="text-morphia-muted uppercase tracking-wider text-[10px]">Número de Pedido:</span>
                 <strong className="text-morphia-dark font-mono text-sm">
                   {completedOrder.order_number || 'AM-2026-9281'}
                 </strong>
               </div>
               <div className="flex justify-between">
-                <span className="text-morphia-muted">Cliente:</span>
+                <span className="text-morphia-muted uppercase tracking-wider text-[10px]">Cliente:</span>
                 <span className="text-morphia-dark font-medium">{formData.customer_full_name}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-morphia-muted">Destino:</span>
+                <span className="text-morphia-muted uppercase tracking-wider text-[10px]">Destino:</span>
                 <span className="text-morphia-dark font-medium">{formData.city}, Perú</span>
               </div>
               <div className="flex justify-between border-t border-morphia-beige/40 pt-2 font-semibold">
-                <span className="text-morphia-dark">Monto Total:</span>
-                <span className="text-morphia-dark">S/ {total} PEN</span>
+                <span className="text-morphia-dark uppercase tracking-wider text-[10px]">Total Inversión:</span>
+                <span className="text-morphia-dark tabular-nums font-semibold text-sm">S/ {total} PEN</span>
               </div>
             </div>
 
-            <p className="text-xs text-morphia-muted max-w-sm mx-auto leading-relaxed">
-              Hemos enviado los detalles y código de seguimiento a <strong>{formData.customer_email}</strong>. Tu pedido incluye el estuche de gamuza celeste y la tarjeta de agradecimiento.
+            <p className="text-xs text-morphia-muted max-w-sm mx-auto leading-relaxed font-light">
+              Hemos enviado los detalles y código de seguimiento a <strong>{formData.customer_email}</strong>. Tu pedido incluye el estuche de gamuza celeste y la tarjeta de cuidado.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-3">
               <button
                 type="button"
                 onClick={onClose}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-morphia-dark text-morphia-cream text-xs uppercase tracking-widest font-semibold hover:bg-morphia-dark/90 transition-all"
+                className="whitespace-nowrap px-8 py-3.5 bg-morphia-dark text-morphia-cream text-xs uppercase tracking-[0.2em] font-medium hover:bg-morphia-dark/90 border border-morphia-dark transition-all"
               >
-                Volver a la Tienda
+                Volver al Atelier
               </button>
             </div>
           </div>
@@ -134,26 +135,26 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
           /* Order Form */
           <div>
             <div className="mb-6">
-              <span className="text-[11px] uppercase tracking-widest font-semibold text-morphia-gold block">
-                Finalizar Compra
+              <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-morphia-gold block mb-1">
+                Atelier Morphia · Despacho Seguro
               </span>
-              <h3 className="font-serif text-2xl text-morphia-dark mt-1">
-                Datos de Envío y Entrega
+              <h3 className="font-serif text-2xl text-morphia-dark font-normal">
+                Datos de Envío & Entrega
               </h3>
-              <p className="text-xs text-morphia-muted mt-1">
-                Despachamos desde Cusco a todas las provincias del Perú con empaque seguro.
+              <p className="text-xs text-morphia-muted mt-1 font-light leading-relaxed">
+                Despachamos desde Cusco a todas las provincias del Perú con empaque sellado de cortesía.
               </p>
             </div>
 
             {error && (
-              <div className="mb-4 p-3 rounded-xl bg-red-100 text-red-700 text-xs">
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 text-xs">
                 {error}
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
               <div>
-                <label className="block text-morphia-dark font-medium mb-1">
+                <label className="block text-morphia-dark font-medium uppercase tracking-wider text-[10px] mb-1">
                   Nombre Completo *
                 </label>
                 <input
@@ -163,13 +164,13 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
                   value={formData.customer_full_name}
                   onChange={handleChange}
                   placeholder="Ej. María Elena Quispe"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-morphia-white border border-morphia-beige text-morphia-dark placeholder:text-morphia-muted/60 focus:outline-none focus:ring-2 focus:ring-morphia-blue"
+                  className="w-full px-3.5 py-2.5 bg-white border border-morphia-beige/80 text-morphia-dark placeholder:text-morphia-muted/50 focus:outline-none focus:border-morphia-dark focus:ring-1 focus:ring-morphia-dark transition-all"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-morphia-dark font-medium mb-1">
+                  <label className="block text-morphia-dark font-medium uppercase tracking-wider text-[10px] mb-1">
                     Correo Electrónico *
                   </label>
                   <input
@@ -179,12 +180,12 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
                     value={formData.customer_email}
                     onChange={handleChange}
                     placeholder="maria@ejemplo.pe"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-morphia-white border border-morphia-beige text-morphia-dark placeholder:text-morphia-muted/60 focus:outline-none focus:ring-2 focus:ring-morphia-blue"
+                    className="w-full px-3.5 py-2.5 bg-white border border-morphia-beige/80 text-morphia-dark placeholder:text-morphia-muted/50 focus:outline-none focus:border-morphia-dark focus:ring-1 focus:ring-morphia-dark transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-morphia-dark font-medium mb-1">
+                  <label className="block text-morphia-dark font-medium uppercase tracking-wider text-[10px] mb-1">
                     Teléfono / WhatsApp *
                   </label>
                   <input
@@ -194,14 +195,14 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
                     value={formData.customer_phone}
                     onChange={handleChange}
                     placeholder="+51 984 000 000"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-morphia-white border border-morphia-beige text-morphia-dark placeholder:text-morphia-muted/60 focus:outline-none focus:ring-2 focus:ring-morphia-blue"
+                    className="w-full px-3.5 py-2.5 bg-white border border-morphia-beige/80 text-morphia-dark placeholder:text-morphia-muted/50 focus:outline-none focus:border-morphia-dark focus:ring-1 focus:ring-morphia-dark transition-all"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="sm:col-span-2">
-                  <label className="block text-morphia-dark font-medium mb-1">
+                  <label className="block text-morphia-dark font-medium uppercase tracking-wider text-[10px] mb-1">
                     Dirección de Entrega *
                   </label>
                   <input
@@ -211,12 +212,12 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
                     value={formData.shipping_address}
                     onChange={handleChange}
                     placeholder="Av. El Sol 123, Dpto 4"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-morphia-white border border-morphia-beige text-morphia-dark placeholder:text-morphia-muted/60 focus:outline-none focus:ring-2 focus:ring-morphia-blue"
+                    className="w-full px-3.5 py-2.5 bg-white border border-morphia-beige/80 text-morphia-dark placeholder:text-morphia-muted/50 focus:outline-none focus:border-morphia-dark focus:ring-1 focus:ring-morphia-dark transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-morphia-dark font-medium mb-1">
+                  <label className="block text-morphia-dark font-medium uppercase tracking-wider text-[10px] mb-1">
                     Ciudad *
                   </label>
                   <input
@@ -226,13 +227,13 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
                     value={formData.city}
                     onChange={handleChange}
                     placeholder="Cusco, Lima..."
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-morphia-white border border-morphia-beige text-morphia-dark placeholder:text-morphia-muted/60 focus:outline-none focus:ring-2 focus:ring-morphia-blue"
+                    className="w-full px-3.5 py-2.5 bg-white border border-morphia-beige/80 text-morphia-dark placeholder:text-morphia-muted/50 focus:outline-none focus:border-morphia-dark focus:ring-1 focus:ring-morphia-dark transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-morphia-dark font-medium mb-1">
+                <label className="block text-morphia-dark font-medium uppercase tracking-wider text-[10px] mb-1">
                   Dedicatoria de Regalo (Opcional)
                 </label>
                 <textarea
@@ -240,23 +241,24 @@ export default function CheckoutModal({ isOpen, onClose, cartItems = [], onOrder
                   rows="2"
                   value={formData.gift_note}
                   onChange={handleChange}
-                  placeholder="Escribe un mensaje para incluirlo en la tarjeta de agradecimiento..."
-                  className="w-full px-3.5 py-2 rounded-xl bg-morphia-white border border-morphia-beige text-morphia-dark placeholder:text-morphia-muted/60 focus:outline-none focus:ring-2 focus:ring-morphia-blue"
+                  placeholder="Mensaje personalizado para la tarjeta de agradecimiento..."
+                  className="w-full px-3.5 py-2 bg-white border border-morphia-beige/80 text-morphia-dark placeholder:text-morphia-muted/50 focus:outline-none focus:border-morphia-dark focus:ring-1 focus:ring-morphia-dark transition-all"
                 />
               </div>
 
               {/* Price summary badge */}
-              <div className="p-3 rounded-xl bg-morphia-white/90 border border-morphia-beige flex items-center justify-between font-semibold">
-                <span>Total a Pagar:</span>
-                <span className="text-base text-morphia-dark font-bold">
-                  S/ {total} PEN
+              <div className="p-3.5 bg-white border border-morphia-beige/80 flex items-center justify-between font-medium">
+                <span className="uppercase tracking-wider text-[10px] text-morphia-muted">Total a Pagar:</span>
+                <span className="text-base text-morphia-dark font-semibold tabular-nums">
+                  S/ {total} <span className="text-xs font-normal text-morphia-muted">PEN</span>
                 </span>
               </div>
 
+              {/* Single-line Architectural Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3.5 rounded-xl bg-morphia-dark text-morphia-cream hover:bg-morphia-dark/90 hover:text-morphia-white text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 shadow-md transition-all disabled:opacity-50"
+                className="whitespace-nowrap w-full py-4 bg-morphia-dark text-morphia-cream hover:bg-morphia-dark/90 hover:text-morphia-white text-xs uppercase tracking-[0.2em] font-medium flex items-center justify-center gap-2 border border-morphia-dark shadow-sm transition-all disabled:opacity-50"
               >
                 {loading ? (
                   <>
