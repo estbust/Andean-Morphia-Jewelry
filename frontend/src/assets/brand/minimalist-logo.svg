@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" width="40" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+  <!-- Ala superior izquierda y derecha -->
+  <path d="M32 24 C24 8, 6 4, 4 16 C2 24, 16 28, 32 24 Z" />
+  <path d="M32 24 C40 8, 58 4, 60 16 C62 24, 48 28, 32 24 Z" />
+  <!-- Ala inferior izquierda y derecha -->
+  <path d="M32 24 C20 28, 10 38, 16 44 C22 48, 30 38, 32 24 Z" />
+  <path d="M32 24 C44 28, 54 38, 48 44 C42 48, 34 38, 32 24 Z" />
+  <!-- Cuerpo y antenas -->
+  <line x1="32" y1="16" x2="32" y2="36" />
+  <path d="M32 18 Q28 10 24 10" />
+  <path d="M32 18 Q36 10 40 10" />
+</svg>

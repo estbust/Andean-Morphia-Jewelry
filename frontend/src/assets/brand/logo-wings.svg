@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
+  <defs>
+    <style>
+      
+      .am { font-family: 'DM Serif Display', serif; font-size: 95px; fill: currentColor; }
+      .sub { font-family: 'Montserrat', sans-serif; font-size: 14px; fill: currentColor; letter-spacing: 11px; }
+      .wing { fill: none; stroke: currentColor; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  
+  <!-- Ala Izquierda -->
+  <path class="wing" d="M 135 150 C 140 90, 95 40, 35 15 C 35 65, 65 120, 135 150 Z" />
+  <path class="wing" d="M 55 85 C 85 95, 115 115, 135 150" />
+  <path class="wing" d="M 80 120 C 100 125, 120 135, 135 150" />
+  <path class="wing" d="M 135 150 C 90 155, 85 205, 80 240 C 115 215, 135 185, 135 150 Z" />
+  <path class="wing" d="M 135 150 C 110 175, 100 200, 90 225" />
+
+  <!-- Ala Derecha -->
+  <path class="wing" d="M 272 135 C 285 85, 325 45, 375 30 C 375 75, 345 125, 272 135 Z" />
+  <path class="wing" d="M 352 90 C 330 100, 305 115, 272 135" />
+
+  <!-- Textos Centrales -->
+  <text x="205" y="190" text-anchor="middle" class="am">AM</text>
+  <text x="210" y="225" text-anchor="middle" class="sub">JEWELRY</text>
+</svg>

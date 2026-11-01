@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="100%">
+  <defs>
+    <style>
+      
+      .title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 46px;
+        fill: currentColor;
+        letter-spacing: 2px;
+      }
+      .subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        fill: currentColor;
+        letter-spacing: 14px;
+      }
+    </style>
+  </defs>
+  <text x="250" y="58" text-anchor="middle" class="title">ANDEAN MORPHIA</text>
+  <text x="257" y="95" text-anchor="middle" class="subtitle">JEWELRY</text>
+</svg>

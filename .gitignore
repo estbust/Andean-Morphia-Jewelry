@@ -1,0 +1,44 @@
+# ==========================================
+# Andean Morphia Jewelry - Git Ignore Rules
+# ==========================================
+
+# Python / Django artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+backend/.venv/
+backend/db.sqlite3
+backend/staticfiles/
+backend/media/
+*.sqlite3
+*.sqlite3-journal
+local_settings.py
+
+# Node / Frontend artifacts
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+*.local
+.npm
+.eslintcache
+
+# Environment variables & IDE / OS artifacts
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+*.swp
+
+# Explicit inclusions (Ensure brand assets & ring images are tracked)
+!frontend/public/products/*.png
+!frontend/src/assets/brand/*.svg
+!frontend/src/assets/*.png
+!frontend/src/assets/*.svg
